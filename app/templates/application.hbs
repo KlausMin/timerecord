@@ -1,5 +1,7 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<button {{action "stamp"}}>
+  <h1>{{currentTime}}</h1>
+</button>
 
-{{outlet}}
+{{#each model as |listing|}}
+  <p>{{listing}}</p>
+{{/each}}
