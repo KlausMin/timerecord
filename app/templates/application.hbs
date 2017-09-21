@@ -1,5 +1,10 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<button {{action "stamp"}}>{{model}}</button>
 
-{{outlet}}
+<ul>
+  {{#each timeArray as |list|}}
+    <li>
+      {{list}}
+      <button {{action "erase" list}}>x</button>
+    </li>
+  {{/each}}
+</ul>
